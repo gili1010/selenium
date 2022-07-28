@@ -1,0 +1,96 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Ingresar a rentas deudas automotor",
+        "description": "",
+        "id": "rentas-ver-deuda-automotor;ingresar-a-rentas-deudas-automotor",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3769504900,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Navego a Rentas",
+            "match": {
+              "location": "RentasSteps.navigateToRentas()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 960110700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "selecciono pagar y ver deuda",
+            "match": {
+              "location": "RentasSteps.clickPagaryVerDeuda()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1192720500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "selecciono automotor",
+            "match": {
+              "location": "RentasSteps.clickAutomotor()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 154850400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "ingreso patente del vehiculo",
+            "match": {
+              "location": "RentasSteps.ingresarPatente()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 101553900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "selecciono Concultar",
+            "match": {
+              "location": "RentasSteps.clickConsultar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h4[contains(text(),\u0027Detalle de cuotas\u0027)] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.3.0\u0027, revision: \u0027a4995e2c09*\u0027\nSystem info: host: \u0027DESKTOP-7C7DNCA\u0027, ip: \u0027192.168.1.15\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\\Users\\intel\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55003}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55003/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f2561613aa0daf3fe99b9518d441a969\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)\r\n\tat pages.BasePage.Find(BasePage.java:39)\r\n\tat pages.BasePage.textFromElement(BasePage.java:81)\r\n\tat pages.RentasPage.validateResult(RentasPage.java:34)\r\n\tat steps.RentasSteps.validateResult(RentasSteps.java:34)\r\n\tat ✽.Obtengo resultados(src/test/resources/features/Google.feature:8)\r\n",
+              "duration": 10058554300,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "Obtengo resultados",
+            "match": {
+              "location": "RentasSteps.validateResult()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Rentas ver deuda Automotor",
+    "description": "",
+    "id": "rentas-ver-deuda-automotor",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Google.feature",
+    "tags": []
+  }
+]
