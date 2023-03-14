@@ -19,7 +19,6 @@ public class RentasPage extends BasePage{
     }
 
     public void clickAutomotor(){
-        clickElement(automotor);
     }
 
     public void ingresarPatente(){

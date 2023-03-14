@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -18,9 +20,14 @@ public class BasePage {
     private static WebDriverWait wait;
     private static Actions action;
 
+   // WebDriver driver;
+
     static {
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
+        //driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
