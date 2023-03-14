@@ -34,6 +34,8 @@ public class BasePage {
     public BasePage(WebDriver driver){
         BasePage.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        //prueba
     }
 
     public static void navigateTo(String url){
